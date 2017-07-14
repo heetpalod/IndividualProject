@@ -14,7 +14,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #888888;
     color: white;
     padding: 14px 20px;
     margin: 8px 72px;
@@ -31,7 +31,7 @@ button:hover {
     width: 50%;
     padding: 10px 18px;
     margin-left: 10px;
-    background-color: #f44336;
+    background-color: #333;
 }
 
 .imgcontainer {
@@ -118,10 +118,10 @@ span.psw {
 }
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    
     overflow: hidden;
     background-color: #333;
+    font-size: 14px;
 }
 
 li {
@@ -132,7 +132,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 20px 20px 20px;
     text-decoration: none;
 }
 
@@ -144,26 +144,49 @@ li a:hover:not(.active) {
     background-color: #4CAF50;
 
 }
-.caption{
-  background-color:#f5fff4;
+img{
+  border: 10px solid grey;
+  padding:10px;
+}
+
+.logo{
+    border: 0px solid grey;
+    padding:1px;
+    border-radius: 10px;
+    border-style: groove;
+    float:left;
+    
+}
+.frame {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+.zoomin img {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.zoomin img:hover {
+  width: 150px;
+  height: 150px;
 }
 }
 </style>
 </head>
 <body>
 <div class="container">
-<img src="logo.png" float="left" height="75" width="150";>
-<p class="caption"><b>India's Largest Market Place</b></p>
+
 <ul>
+<li>
+<img class="logo" src="logo.png" float="left" height="65" width="200" style="border-image: 1px border-radius:10px;">
+
   <li><a href="#home">Home</a></li>
-   <li><a href="#SubmitAd">Submit Ad</a></li>
-  <li>
-  <form style="padding-bottom: 10px;">
-  <input type="text" name="search" placeholder="Search..">
-  </form>
-  </li>
+   <li><a href="#Buy">Buy</a></li>
+  <li><a href="#PostAd">Post Ad</a></li>
   
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right;">Login</button>
+    <button class"homelog" onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right;">Login</button>
 
 <div id="id01" class="modal">
   
@@ -200,24 +223,64 @@ window.onclick = function(event) {
     }
 }
 </script>
-<li style="float:right"><a href="#register">New User? Register here</a></li>
+
 
 </ul>
 </div>
-<table style="margin-left: 250px; margin-top: 20px">
-<tr>
+<div class="container" style="">
+<div class="row" style="margin-left: 100px; margin-top: 20px; margin-right: 50px;  ">
 
-<td><img src="Real estate icon.jpg" height="200" width="200">
-</td>
-<td><img src="Furniture icon.png" height="200" width="200">
-</td>
-<td><img src="Hardware icon.png" height="200" width="200">
-</td>
-<td><img src="Pet icon.png" height="200" width="200">
-</td>
+<div class="col-md-2">
+<div class="zoomin frame">
+<img src="Real estate icon.jpg"  height="120" width="120" style="border-radius:50%; margin-right:10px">
+<h3 style="text-align: center; padding-right: 75px">Real Estate</h3>
+</div>
+</div>
+
+
+<div class="col-md-2">
+<div class="zoomin frame">
+<img src="Furniture icon.png" height="120" width="120" style="border-radius:50%; margin-right:10px"><br>
+<h3 style="text-align: center; padding-right: 90px">Furniture</h3>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="zoomin frame">
+<img src="clothing icon.png" height="120" width="120" style="border-radius:50%; margin-right:10px">
+<h3 style="text-align: center; padding-right: 90px">Fashion</h3>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="zoomin frame">
+<img src="book icon.png" height="120" width="120" style="border-radius:50%; margin-right:10px">
+<h3 style="text-align: center; padding-right: 90px">Books</h3>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="zoomin frame">
+<img src="Hardware icon.png" height="120" width="120" style="border-radius:50%; margin-right:10px">
+<h3 style="text-align: center; padding-right: 90px">Hardware</h3>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="zoomin frame">
+<img src="Pet icon.png" height="120" width="120" style="border-radius:50%; margin-right:10px">
+<h3 style="text-align: center; padding-right: 90px">Pets</h3>
+</div>
+</div>
   
-</tr>
-</table>
+</div>
+
+<div class="container" style="background-color: #333;">
+</div>
+
+
+
+</div>
 
 </body>
 </html>
